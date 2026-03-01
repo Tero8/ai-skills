@@ -1,30 +1,9 @@
 ---
 name: linkedin-content
 description: "LinkedIn post writing with hook formulas, formatting rules, and engagement patterns. Covers post types, algorithm signals, character limits, and content pillars. Use for: LinkedIn posts, professional content, thought leadership, B2B content, personal branding. Triggers: linkedin post, linkedin content, linkedin writing, linkedin strategy, linkedin engagement, linkedin algorithm, linkedin hook, linkedin formatting, thought leadership, professional content, b2b content, linkedin growth"
-allowed-tools: Bash(infsh *)
 ---
 
 # LinkedIn Content
-
-Write high-engagement LinkedIn posts via [inference.sh](https://inference.sh) CLI.
-
-## Quick Start
-
-```bash
-curl -fsSL https://cli.inference.sh | sh && infsh login
-
-# Research trending LinkedIn content patterns
-infsh app run tavily/search-assistant --input '{
-  "query": "LinkedIn viral post examples 2024 high engagement patterns"
-}'
-
-# Post to X (cross-posting reference)
-infsh app run x/post-create --input '{
-  "text": "Your cross-posted version here"
-}'
-```
-
-> **Install note:** The [install script](https://cli.inference.sh) only detects your OS/architecture, downloads the matching binary from `dist.inference.sh`, and verifies its SHA-256 checksum. No elevated permissions or background processes. [Manual install & verification](https://dist.inference.sh/cli/checksums.txt) available.
 
 ## Post Anatomy
 
@@ -178,19 +157,6 @@ Every LinkedIn creator should have 3-5 pillars they rotate through:
 
 ## Visual Content
 
-```bash
-# Generate a visual for a LinkedIn post
-infsh app run infsh/html-to-image --input '{
-  "html": "<div style=\"width:1080px;height:1080px;background:#0f172a;display:flex;align-items:center;justify-content:center;padding:80px;font-family:system-ui;color:white;text-align:center\"><div><h1 style=\"font-size:56px;font-weight:900;line-height:1.2;margin:0\">The best code is the code you don&apos;t write</h1><p style=\"font-size:22px;opacity:0.5;margin-top:24px\">— Every senior engineer</p></div></div>"
-}'
-
-# Generate a professional photo for a personal post
-infsh app run falai/flux-dev-lora --input '{
-  "prompt": "candid professional photo, person speaking at a conference podium, audience in background blurred, natural stage lighting, authentic moment, corporate event photography",
-  "width": 1200,
-  "height": 900
-}'
-```
 
 ## CTA Formulas
 
@@ -222,10 +188,6 @@ End every post with engagement driver:
 
 ## Related Skills
 
-```bash
-npx skills add inference-sh/skills@social-media-carousel
-npx skills add inference-sh/skills@content-repurposing
-npx skills add inference-sh/skills@twitter-thread-creation
-```
-
-Browse all apps: `infsh app list`
+/social-media-carousel
+/content-repurposing
+/twitter-thread-creation
